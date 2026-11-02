@@ -1,0 +1,15 @@
+// main.scss
+
+// base
+@use 'base/reset';
+@use 'base/typography';
+
+// layout
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/section';
+
+// components
+@use 'components/button';
+@use 'components/horario';
+@use 'components/calculadora';
