@@ -1,1 +1,8 @@
 // _mixins.scss
+
+// Media query mobile-first: aplica el contenido a partir de un breakpoint.
+@mixin desde($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}

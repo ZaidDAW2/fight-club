@@ -3,9 +3,229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gimnasio</title>
+    <title>K1, Boxeo y BJJ en Sants, Barcelona</title>
+    <meta
+      name="description"
+      content="K1, Boxeo y BJJ en Sants, Barcelona"
+    />
   </head>
   <body>
+    <header class="cabecera">
+      <a class="cabecera__marca" href="#inicio">Fight Club</a>
+      <nav class="cabecera__nav" aria-label="Secciones">
+        <ul class="cabecera__lista">
+          <li><a class="cabecera__enlace" href="#disciplinas">Disciplinas</a></li>
+          <li><a class="cabecera__enlace" href="#horario">Horario</a></li>
+          <li><a class="cabecera__enlace" href="#entrenadores">Entrenadores</a></li>
+          <li><a class="cabecera__enlace" href="#tarifas">Tarifas</a></li>
+          <li><a class="cabecera__enlace" href="#primera-clase">Primera clase</a></li>
+          <li><a class="cabecera__enlace" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 1. Portada -->
+      <section id="inicio" class="portada">
+        <h1>Fight Club</h1>
+        <p class="portada__frase">
+          Artes marciales en Sants: K1, Boxeo y BJJ para adultos y niños.
+          Empieza desde cero, a tu ritmo y con buen ambiente.
+        </p>
+        <a
+          class="btn btn--primario js-whatsapp"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          Prueba una clase gratis
+        </a>
+      </section>
+
+      <!-- 2. Disciplinas -->
+      <section id="disciplinas" class="seccion">
+        <div class="seccion__interior">
+          <h2>Disciplinas</h2>
+          <div class="bloques bloques--2">
+            <div class="tarjeta">
+              <h3>Adultos</h3>
+              <p>
+                K1 y Boxeo para cardio, técnica de golpeo y defensa personal;
+                BJJ (jiu-jitsu brasileño) para lucha en el suelo y control sin
+                golpes.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <h3>Niños</h3>
+              <p>
+                Clases infantiles de iniciación donde aprenden disciplina,
+                coordinación y autoconfianza en un entorno seguro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Horario -->
+      <section id="horario" class="seccion">
+        <div class="seccion__interior">
+          <h2>Horario</h2>
+          <div class="horario">
+            <div class="horario__filtros" role="group" aria-label="Filtrar por disciplina"></div>
+            <div class="horario__dias"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Entrenadores -->
+      <section id="entrenadores" class="seccion">
+        <div class="seccion__interior">
+          <h2>Entrenadores</h2>
+          <div class="bloques bloques--2">
+            <div class="tarjeta entrenador">
+              <div class="entrenador__foto">Foto</div>
+              <h3>Nombre del entrenador</h3>
+              <p>
+                Trayectoria provisional: años de experiencia, competiciones y
+                especialidad. Texto por confirmar.
+              </p>
+            </div>
+            <div class="tarjeta entrenador">
+              <div class="entrenador__foto">Foto</div>
+              <h3>Nombre de la entrenadora</h3>
+              <p>
+                Trayectoria provisional: años de experiencia, competiciones y
+                especialidad. Texto por confirmar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Tarifas -->
+      <section id="tarifas" class="seccion">
+        <div class="seccion__interior">
+          <h2>Tarifas</h2>
+          <div class="tarifas__tabla"></div>
+
+          <h3>Calcula tu cuota</h3>
+          <div class="calculadora">
+            <div class="calculadora__controles"></div>
+            <div class="calculadora__resultado"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Tu primera clase -->
+      <section id="primera-clase" class="seccion">
+        <div class="seccion__interior">
+          <h2>Tu primera clase</h2>
+          <div class="faq">
+            <details class="faq__item">
+              <summary>¿Qué traigo el primer día?</summary>
+              <p>
+                Ropa cómoda y una botella de agua. Para K1 y Boxeo se recomienda
+                guantes y bucal, pero el primer día no te preocupes: el
+                entrenador te presta el material.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Y si no tengo guantes ni bucal?</summary>
+              <p>
+                El entrenador presta material para que puedas entrenar desde el
+                primer día sin comprar nada.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Puedo comprar mi propio material?</summary>
+              <p>
+                Sí. En el gimnasio vendemos guantes, bucales y equipación para
+                cuando quieras tener el tuyo.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>¿La primera clase es gratis?</summary>
+              <p>
+                Sí, la primera clase es gratis. Ven, pruébala y decide después.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Necesito experiencia o estar en forma?</summary>
+              <p>
+                No necesitas experiencia previa ni una forma física concreta:
+                las clases se adaptan a tu nivel. [CONFIRMAR]
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Me obligan a hacer sparring?</summary>
+              <p>
+                El sparring nunca es obligatorio; se practica de forma
+                progresiva y voluntaria. [CONFIRMAR]
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Contacto -->
+      <section id="contacto" class="seccion">
+        <div class="seccion__interior">
+          <h2>Contacto</h2>
+          <h3>Dónde estamos</h3>
+          <ul class="contacto__lista">
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Carrer+d%27Exemple+123+08014+Barcelona"
+                target="_blank"
+                rel="noopener"
+              >
+                Carrer d'Exemple 123, Sants, 08014 Barcelona
+              </a>
+            </li>
+            <li>
+              <a class="js-whatsapp-contacto" href="#" target="_blank" rel="noopener">
+                WhatsApp: 600 00 00 00
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/fightclub.bcn"
+                target="_blank"
+                rel="noopener"
+              >
+                Instagram: @fightclub.bcn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://search.google.com/local/reviews?placeid=PLACE_ID_PROVISIONAL"
+                target="_blank"
+                rel="noopener"
+              >
+                Reseñas en Google
+              </a>
+            </li>
+          </ul>
+          <a
+            class="btn btn--primario js-whatsapp"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            Prueba una clase gratis
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <p>&copy; Fight Club · Sants, Barcelona</p>
+      <nav class="pie__enlaces" aria-label="Legal">
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de privacidad</a>
+      </nav>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

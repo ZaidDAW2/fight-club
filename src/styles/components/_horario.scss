@@ -1,1 +1,92 @@
 // _horario.scss
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.horario {
+  &__filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__filtro {
+    padding: 0.45rem 0.9rem;
+    border: 1px solid $color-borde;
+    border-radius: 999px;
+    background: $color-superficie;
+    font-size: 0.9rem;
+    color: $color-texto-suave;
+
+    &[aria-pressed='true'] {
+      background: $color-acento;
+      border-color: $color-acento;
+      color: #fff;
+    }
+  }
+
+  // Un bloque por día: apilados en el móvil, en columnas en pantallas grandes.
+  &__dias {
+    display: grid;
+    gap: 1rem;
+
+    @include desde($bp-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desde($bp-lg) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  &__dia {
+    padding: 1rem;
+    background: $color-superficie;
+    border: 1px solid $color-borde;
+    border-radius: 0.7rem;
+  }
+
+  &__nombre-dia {
+    margin-bottom: 0.75rem;
+  }
+
+  &__clase {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid $color-borde;
+
+    &:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+  }
+
+  &__disciplina {
+    font-weight: 700;
+  }
+
+  &__hora {
+    font-size: 0.9rem;
+    color: $color-texto-suave;
+  }
+
+  &__infantil {
+    align-self: flex-start;
+    margin-top: 0.2rem;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid $color-acento;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $color-acento;
+  }
+
+  &__vacio {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: $color-texto-suave;
+  }
+}

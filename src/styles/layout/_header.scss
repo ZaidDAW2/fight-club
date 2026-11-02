@@ -1,1 +1,60 @@
 // _header.scss
+@use '../abstracts/variables' as *;
+
+body {
+  padding-top: $altura-cabecera;
+}
+
+.cabecera {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  height: $altura-cabecera;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  background: rgba(15, 15, 16, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid $color-borde;
+
+  &__marca {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: $color-texto;
+  }
+
+  &__nav {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // Menú con desplazamiento horizontal en el móvil, sin JS.
+  &__lista {
+    display: flex;
+    gap: 0.25rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__enlace {
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    color: $color-texto-suave;
+
+    &:hover {
+      color: $color-texto;
+      background: $color-superficie;
+    }
+  }
+}

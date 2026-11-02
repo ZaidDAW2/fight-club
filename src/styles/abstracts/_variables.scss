@@ -1,1 +1,22 @@
 // _variables.scss
+
+// Tipografía del sistema (sin fuentes externas)
+$fuente-sistema: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif;
+
+// Colores (tema oscuro)
+$color-fondo: #0f0f10;
+$color-superficie: #1a1a1d;
+$color-borde: #2a2a2e;
+$color-texto: #f5f5f5;
+$color-texto-suave: #a0a0a8;
+$color-acento: #e5392f;
+$color-acento-oscuro: #c22b22;
+
+// Medidas
+$altura-cabecera: 3.5rem;
+$ancho-contenido: 60rem;
+
+// Breakpoints (mobile-first)
+$bp-md: 48rem; // ~768px
+$bp-lg: 64rem; // ~1024px

@@ -1,1 +1,117 @@
 // _calculadora.scss
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Tabla de tarifas
+.tarifas__tabla {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.tarifas__cuotas {
+  width: 100%;
+  border-collapse: collapse;
+
+  caption {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: $color-texto-suave;
+  }
+
+  th,
+  td {
+    padding: 0.7rem 0.75rem;
+    border-bottom: 1px solid $color-borde;
+    text-align: left;
+  }
+
+  thead th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $color-texto-suave;
+  }
+
+  tbody th {
+    font-weight: 600;
+  }
+
+  td {
+    text-align: right;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}
+
+// Calculadora de cuota
+.calculadora {
+  padding: 1.25rem;
+  background: $color-superficie;
+  border: 1px solid $color-borde;
+  border-radius: 0.7rem;
+
+  &__controles {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+
+    @include desde($bp-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__disciplina {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    label {
+      font-weight: 700;
+    }
+  }
+
+  &__select {
+    padding: 0.6rem;
+    border: 1px solid $color-borde;
+    border-radius: 0.5rem;
+    background: $color-fondo;
+    color: $color-texto;
+    font-size: 0.95rem;
+  }
+
+  &__desglose {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__linea {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $color-borde;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 0.25rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  &__nota,
+  &__vacio {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: $color-texto-suave;
+  }
+
+  small {
+    font-weight: 600;
+    color: $color-acento;
+  }
+}

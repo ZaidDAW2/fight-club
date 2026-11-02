@@ -1,1 +1,22 @@
 // _footer.scss
+@use '../abstracts/variables' as *;
+
+.pie {
+  padding: 2rem 1rem;
+  border-top: 1px solid $color-borde;
+  text-align: center;
+  font-size: 0.85rem;
+  color: $color-texto-suave;
+
+  &__enlaces {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  a:hover {
+    color: $color-texto;
+  }
+}
