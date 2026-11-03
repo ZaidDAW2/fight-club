@@ -6,25 +6,41 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.4rem;
+  min-height: 56px;
+  padding: 0 1.75rem;
   border: 0;
-  border-radius: 0.6rem;
-  font-weight: 700;
-  font-size: 1rem;
+  border-radius: 4px;
+  font-family: $fuente-base;
+  font-weight: 600;
+  font-size: 1.05rem;
   line-height: 1;
   text-align: center;
-  transition: transform 0.08s ease, background 0.15s ease;
+  transition: transform 0.08s ease, background 0.15s ease, color 0.15s ease;
 
   &:active {
     transform: translateY(1px);
   }
 
+  // Primario: acento hueso con texto oscuro.
   &--primario {
     background: $color-acento;
-    color: #fff;
+    color: $color-sobre-acento;
 
     &:hover {
       background: $color-acento-oscuro;
+      color: $color-sobre-acento;
+    }
+  }
+
+  // Secundario: contorno sobre fondo oscuro.
+  &--linea {
+    background: $color-fondo;
+    color: $color-texto;
+    border: 1px solid $color-tenue;
+
+    &:hover {
+      color: $color-texto;
+      border-color: $color-texto;
     }
   }
 }

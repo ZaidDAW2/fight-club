@@ -1,0 +1,36 @@
+// _cinta.scss — tira diagonal tipo "cinta" con texto repetido.
+@use '../abstracts/variables' as *;
+
+.cinta {
+  overflow: hidden;
+  padding: 1.5rem 0;
+
+  &__pista {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0 -2.5rem;
+    padding: 0.6rem 0;
+    background: $color-cinta;
+    color: $color-cinta-texto;
+    transform: rotate(-3deg);
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  // Segunda tira, en sentido contrario y más oscura.
+  &__pista--inversa {
+    margin-top: -0.4rem;
+    background: $color-cinta-texto;
+    color: $color-cinta;
+    transform: rotate(2.5deg);
+  }
+
+  &__texto {
+    flex-shrink: 0;
+    font-family: $fuente-marca;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}

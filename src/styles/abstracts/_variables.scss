@@ -1,17 +1,27 @@
 // _variables.scss
 
-// Tipografía del sistema (sin fuentes externas)
-$fuente-sistema: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Helvetica, Arial, sans-serif;
+// Tipografía (auto-alojada; ver base/_fonts.scss). Fallback al sistema.
+$fuente-base: 'Barlow', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+$fuente-titulo: 'Barlow Condensed', 'Barlow', system-ui, sans-serif;
+$fuente-marca: 'Graduate', Georgia, serif;
 
-// Colores (tema oscuro)
-$color-fondo: #0f0f10;
-$color-superficie: #1a1a1d;
-$color-borde: #2a2a2e;
-$color-texto: #f5f5f5;
-$color-texto-suave: #a0a0a8;
-$color-acento: #e5392f;
-$color-acento-oscuro: #c22b22;
+// Colores (según el diseño "Garra y cinta")
+$color-fondo: #1c1c1b; // base oscura (cabecera, tarjetas)
+$color-lienzo: #2b2b29; // lienzo con textura de tela
+$color-superficie: #1c1c1b; // superficie de tarjetas sobre el lienzo
+$color-borde: #383836;
+$color-texto: #f2f0ea; // hueso
+$color-texto-suave: #d6d3ca;
+$color-tenue: #8f8b82; // bordes/btn secundario
+
+// Acento = hueso (elegido). Texto oscuro encima del acento.
+$color-acento: #f2f0ea;
+$color-acento-oscuro: #e3e0d7; // hover del botón primario
+$color-sobre-acento: #1c1c1b;
+
+// Cinta
+$color-cinta: #f2f0ea;
+$color-cinta-texto: #141413;
 
 // Medidas
 $altura-cabecera: 3.5rem;

@@ -14,16 +14,26 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 0 1rem;
-  background: rgba(15, 15, 16, 0.92);
-  backdrop-filter: blur(8px);
+  background: $color-fondo;
   border-bottom: 1px solid $color-borde;
 
   &__marca {
-    font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     color: $color-texto;
+  }
+
+  &__logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__nombre {
+    font-family: $fuente-marca;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 
   &__nav {
@@ -50,11 +60,12 @@ body {
     padding: 0.4rem 0.6rem;
     border-radius: 0.4rem;
     font-size: 0.9rem;
+    font-weight: 500;
     color: $color-texto-suave;
 
     &:hover {
       color: $color-texto;
-      background: $color-superficie;
+      background: $color-lienzo;
     }
   }
 }

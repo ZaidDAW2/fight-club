@@ -2,8 +2,13 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+// Textura de tela en todo el fondo (provisional, sin foto).
+body {
+  @include tela($color-lienzo);
+}
+
 .seccion {
-  padding: 3rem 1rem;
+  padding: 3.5rem 1rem;
   scroll-margin-top: $altura-cabecera;
 
   &__interior {
@@ -12,27 +17,134 @@
   }
 }
 
-// Portada con degradado oscuro (fondo provisional, sin imagen).
+// ===== Portada =====
 .portada {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  min-height: calc(100svh - #{$altura-cabecera});
-  padding: 3rem 1rem;
+  position: relative;
   scroll-margin-top: $altura-cabecera;
-  text-align: center;
-  background: linear-gradient(160deg, #000 0%, #141417 55%, #1f1f24 100%);
+  padding: 2rem 1rem 3rem;
+  @include tela($color-lienzo);
+
+  &__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    max-width: $ancho-contenido;
+    margin-inline: auto;
+
+    @include desde($bp-md) {
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 2.5rem;
+      padding-block: 2rem;
+    }
+  }
+
+  // Bloque visual: garra de fondo + logo redondo.
+  &__visual {
+    position: relative;
+    flex: 1 1 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 240px;
+
+    @include desde($bp-md) {
+      height: 420px;
+    }
+  }
+
+  &__garra {
+    position: absolute;
+    width: min(100%, 360px);
+    height: auto;
+    opacity: 0.9;
+    pointer-events: none;
+
+    @include desde($bp-md) {
+      width: 620px;
+      max-width: none;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: $color-fondo;
+    box-shadow: 0 0 0 7px $color-fondo, 0 16px 40px rgba(0, 0, 0, 0.75);
+
+    @include desde($bp-md) {
+      width: 240px;
+      height: 240px;
+      box-shadow: 0 0 0 10px $color-fondo, 0 24px 60px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  &__texto {
+    flex: 1 1 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    text-align: center;
+
+    @include desde($bp-md) {
+      text-align: left;
+    }
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font-family: $fuente-marca;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    color: $color-texto-suave;
+  }
+
+  &__titulo {
+    margin: 0;
+  }
+
+  &__lema {
+    margin: 0;
+    font-family: $fuente-titulo;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.95;
+    font-size: clamp(1.5rem, 5vw, 2.4rem);
+    color: $color-texto;
+  }
 
   &__frase {
-    max-width: 40rem;
-    font-size: 1.1rem;
+    margin: 0;
+    max-width: 30rem;
+    margin-inline: auto;
+    font-size: 1.05rem;
+    line-height: 1.5;
     color: $color-texto-suave;
+
+    @include desde($bp-md) {
+      margin-inline: 0;
+    }
+  }
+
+  &__acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+
+    @include desde($bp-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
 
-// Rejilla de bloques genéricos (disciplinas, entrenadores).
+// ===== Rejilla de bloques genéricos (disciplinas, entrenadores) =====
 .bloques {
   display: grid;
   gap: 1rem;
@@ -49,7 +161,7 @@
   padding: 1.25rem;
   background: $color-superficie;
   border: 1px solid $color-borde;
-  border-radius: 0.7rem;
+  border-radius: 0.5rem;
 
   h3 {
     margin-bottom: 0.5rem;
@@ -63,13 +175,15 @@
   justify-content: center;
   aspect-ratio: 4 / 3;
   margin-bottom: 0.75rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(135deg, #232327, #121214);
-  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  background: linear-gradient(135deg, #2a2a28, #131312);
+  font-family: $fuente-marca;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
   color: $color-texto-suave;
 }
 
-// Preguntas frecuentes (details/summary).
+// ===== Preguntas frecuentes =====
 .faq {
   display: grid;
   gap: 0.5rem;
@@ -79,12 +193,12 @@
     padding: 0 1rem;
     background: $color-superficie;
     border: 1px solid $color-borde;
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
 
     summary {
       cursor: pointer;
       padding: 0.85rem 0;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     p {
@@ -93,22 +207,24 @@
     }
 
     &[open] summary {
-      color: $color-acento;
+      color: $color-texto;
     }
   }
 }
 
-// Contacto.
+// ===== Contacto =====
 .contacto__lista {
   display: grid;
   gap: 0.75rem;
   margin: 1rem 0 1.5rem;
 
   a {
-    color: $color-acento;
+    color: $color-texto;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 
     &:hover {
-      text-decoration: underline;
+      color: #fff;
     }
   }
 }

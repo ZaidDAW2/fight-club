@@ -16,6 +16,7 @@ html {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden; // evita scroll lateral por las cintas rotadas
   -webkit-font-smoothing: antialiased;
 }
 

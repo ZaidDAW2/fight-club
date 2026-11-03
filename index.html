@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>K1, Boxeo y BJJ en Sants, Barcelona</title>
-    <meta
-      name="description"
-      content="K1, Boxeo y BJJ en Sants, Barcelona"
-    />
+    <meta name="description" content="K1, Boxeo y BJJ en Sants, Barcelona" />
   </head>
   <body>
     <header class="cabecera">
-      <a class="cabecera__marca" href="#inicio">Fight Club</a>
+      <a class="cabecera__marca" href="#inicio">
+        <img class="cabecera__logo" src="/src/assets/logo.png" alt="" />
+        <span class="cabecera__nombre">FIGHT CLUB CANTO</span>
+      </a>
       <nav class="cabecera__nav" aria-label="Secciones">
         <ul class="cabecera__lista">
           <li><a class="cabecera__enlace" href="#disciplinas">Disciplinas</a></li>
           <li><a class="cabecera__enlace" href="#horario">Horario</a></li>
           <li><a class="cabecera__enlace" href="#entrenadores">Entrenadores</a></li>
           <li><a class="cabecera__enlace" href="#tarifas">Tarifas</a></li>
-          <li><a class="cabecera__enlace" href="#primera-clase">Primera clase</a></li>
+          <li><a class="cabecera__enlace" href="#primera-clase">Tu primera clase</a></li>
           <li><a class="cabecera__enlace" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -27,20 +27,56 @@
     <main>
       <!-- 1. Portada -->
       <section id="inicio" class="portada">
-        <h1>Fight Club</h1>
-        <p class="portada__frase">
-          Artes marciales en Sants: K1, Boxeo y BJJ para adultos y niños.
-          Empieza desde cero, a tu ritmo y con buen ambiente.
-        </p>
-        <a
-          class="btn btn--primario js-whatsapp"
-          href="#"
-          target="_blank"
-          rel="noopener"
-        >
-          Prueba una clase gratis
-        </a>
+        <div class="portada__contenido">
+          <div class="portada__visual">
+            <img class="portada__garra" src="/src/assets/garra.svg" alt="" aria-hidden="true" />
+            <img class="portada__logo" src="/src/assets/logo.png" alt="Fight Club Canto" />
+          </div>
+          <div class="portada__texto">
+            <p class="portada__eyebrow">K1 · Boxeo · BJJ · Sants, Barcelona</p>
+            <h1 class="portada__titulo">Fight Club Canto</h1>
+            <p class="portada__lema">Entra chihuahua. Sal doberman.</p>
+            <p class="portada__frase">
+              Artes marciales para adultos y niños, de lunes a viernes. La
+              primera clase es gratis.
+            </p>
+            <div class="portada__acciones">
+              <a class="btn btn--primario js-whatsapp" href="#" target="_blank" rel="noopener">
+                Prueba una clase gratis
+              </a>
+              <a class="btn btn--linea" href="#horario">Ver horario</a>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <!-- Cinta -->
+      <div class="cinta" aria-hidden="true">
+        <div class="cinta__pista">
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+          <span class="cinta__texto">Fight Club Canto ★</span>
+        </div>
+        <div class="cinta__pista cinta__pista--inversa">
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+          <span class="cinta__texto">K1 · Boxeo · BJJ ★</span>
+        </div>
+      </div>
 
       <!-- 2. Disciplinas -->
       <section id="disciplinas" class="seccion">
@@ -83,7 +119,7 @@
           <h2>Entrenadores</h2>
           <div class="bloques bloques--2">
             <div class="tarjeta entrenador">
-              <div class="entrenador__foto">Foto</div>
+              <div class="entrenador__foto">FOTO</div>
               <h3>Nombre del entrenador</h3>
               <p>
                 Trayectoria provisional: años de experiencia, competiciones y
@@ -91,7 +127,7 @@
               </p>
             </div>
             <div class="tarjeta entrenador">
-              <div class="entrenador__foto">Foto</div>
+              <div class="entrenador__foto">FOTO</div>
               <h3>Nombre de la entrenadora</h3>
               <p>
                 Trayectoria provisional: años de experiencia, competiciones y
@@ -188,11 +224,7 @@
               </a>
             </li>
             <li>
-              <a
-                href="https://instagram.com/fightclub.bcn"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://instagram.com/fightclub.bcn" target="_blank" rel="noopener">
                 Instagram: @fightclub.bcn
               </a>
             </li>
@@ -206,12 +238,7 @@
               </a>
             </li>
           </ul>
-          <a
-            class="btn btn--primario js-whatsapp"
-            href="#"
-            target="_blank"
-            rel="noopener"
-          >
+          <a class="btn btn--primario js-whatsapp" href="#" target="_blank" rel="noopener">
             Prueba una clase gratis
           </a>
         </div>
@@ -219,7 +246,7 @@
     </main>
 
     <footer class="pie">
-      <p>&copy; Fight Club · Sants, Barcelona</p>
+      <p>&copy; Fight Club Canto · Sants, Barcelona</p>
       <nav class="pie__enlaces" aria-label="Legal">
         <a href="#">Aviso legal</a>
         <a href="#">Política de privacidad</a>

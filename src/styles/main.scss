@@ -1,6 +1,7 @@
 // main.scss
 
 // base
+@use 'base/fonts';
 @use 'base/reset';
 @use 'base/typography';
 
@@ -11,5 +12,6 @@
 
 // components
 @use 'components/button';
+@use 'components/cinta';
 @use 'components/horario';
 @use 'components/calculadora';

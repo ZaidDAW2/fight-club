@@ -1,8 +1,28 @@
 // _mixins.scss
+@use 'variables' as *;
 
 // Media query mobile-first: aplica el contenido a partir de un breakpoint.
 @mixin desde($bp) {
   @media (min-width: $bp) {
     @content;
   }
+}
+
+// Textura de "tela" tejida con gradientes (sin imagen). Fondo provisional.
+@mixin tela($base: $color-lienzo) {
+  background-color: $base;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.22) 0,
+      rgba(0, 0, 0, 0.22) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 0,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 3px
+    );
 }
