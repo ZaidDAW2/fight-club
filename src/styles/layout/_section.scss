@@ -107,17 +107,6 @@ body {
     margin: 0;
   }
 
-  &__lema {
-    margin: 0;
-    font-family: $fuente-titulo;
-    font-style: italic;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 0.95;
-    font-size: clamp(1.5rem, 5vw, 2.4rem);
-    color: $color-texto;
-  }
-
   &__frase {
     margin: 0;
     max-width: 30rem;
