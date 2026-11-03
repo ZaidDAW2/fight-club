@@ -55,23 +55,20 @@ function calcular() {
 
 function pintarTabla() {
   contenedorTabla.innerHTML = `
-    <table class="tarifas__cuotas">
-      <caption>Cuota mensual por disciplina</caption>
-      <thead>
-        <tr>
-          <th scope="col">Modalidad</th>
-          <th scope="col">Precio al mes</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${cuotas
-          .map(
-            (c) =>
-              `<tr><th scope="row">${c.nombre}</th><td>${formatoEuro(c.precio)}</td></tr>`
-          )
-          .join('')}
-      </tbody>
-    </table>`;
+    <div class="tarifas__cuotas">
+      ${cuotas
+        .map((c) => {
+          const destacada = c.id === 'ilimitado';
+          return `
+        <div class="tarifa${destacada ? ' tarifa--destacada' : ''}">
+          ${destacada ? '<span class="tarifa__etiqueta">La más completa</span>' : ''}
+          <h3 class="tarifa__nombre">${c.nombre}</h3>
+          <p class="tarifa__precio">${formatoEuro(c.precio)}</p>
+          <p class="tarifa__periodo">al mes</p>
+        </div>`;
+        })
+        .join('')}
+    </div>`;
 }
 
 function pintarControles() {

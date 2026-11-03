@@ -1,21 +1,23 @@
 // _header.scss
 @use '../abstracts/variables' as *;
 
-body {
-  padding-top: $altura-cabecera;
-}
-
 .cabecera {
-  position: fixed;
-  inset: 0 0 auto 0;
+  position: sticky;
+  top: 0;
   z-index: 10;
-  height: $altura-cabecera;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 1rem;
   background: $color-fondo;
   border-bottom: 1px solid $color-borde;
+  display: flex;
+  flex-direction: column;
+
+  // Fila superior: marca a la izquierda, CTA a la derecha (misma fila en móvil).
+  &__barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
 
   &__marca {
     display: flex;
@@ -36,12 +38,31 @@ body {
     white-space: nowrap;
   }
 
+  // Botón pequeño de WhatsApp (acento de marca).
+  &__cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+    padding: 0 0.9rem;
+    border-radius: 4px;
+    background: $accent;
+    color: $accent-text;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+
+    &:hover {
+      filter: brightness(1.08);
+    }
+  }
+
+  // Fila inferior: menú con desplazamiento horizontal en el móvil, sin JS.
   &__nav {
-    flex: 1;
+    padding: 0 1rem 0.5rem;
     min-width: 0;
   }
 
-  // Menú con desplazamiento horizontal en el móvil, sin JS.
   &__lista {
     display: flex;
     gap: 0.25rem;

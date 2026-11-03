@@ -5,19 +5,23 @@ $fuente-base: 'Barlow', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 $fuente-titulo: 'Barlow Condensed', 'Barlow', system-ui, sans-serif;
 $fuente-marca: 'Graduate', Georgia, serif;
 
-// Colores (según el diseño "Garra y cinta")
-$color-fondo: #1c1c1b; // base oscura (cabecera, tarjetas)
-$color-lienzo: #2b2b29; // lienzo con textura de tela
-$color-superficie: #1c1c1b; // superficie de tarjetas sobre el lienzo
+// === Acento de la marca — para recolorear la web, edita SOLO estas 2 líneas ===
+$accent: #f2f0ea;
+$accent-text: #1c1c1b;
+
+// Colores base (tema oscuro "Garra y cinta")
+$color-fondo: #1c1c1b; // sección base / cabecera / tarjetas
+$color-fondo-alt: #141413; // sección alterna (ritmo)
+$color-lienzo: #2b2b29; // lienzo con textura de tela (portada)
+$color-superficie: #1c1c1b;
 $color-borde: #383836;
 $color-texto: #f2f0ea; // hueso
 $color-texto-suave: #d6d3ca;
-$color-tenue: #8f8b82; // bordes/btn secundario
+$color-tenue: #8f8b82;
 
-// Acento = hueso (elegido). Texto oscuro encima del acento.
-$color-acento: #f2f0ea;
-$color-acento-oscuro: #e3e0d7; // hover del botón primario
-$color-sobre-acento: #1c1c1b;
+// Alias de acento (derivan de $accent; no editar aquí)
+$color-acento: $accent;
+$color-sobre-acento: $accent-text;
 
 // Cinta
 $color-cinta: #f2f0ea;
@@ -25,6 +29,7 @@ $color-cinta-texto: #141413;
 
 // Medidas
 $altura-cabecera: 3.5rem;
+$offset-ancla: 6rem; // compensa la cabecera sticky en los saltos de ancla
 $ancho-contenido: 60rem;
 
 // Breakpoints (mobile-first)

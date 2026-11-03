@@ -8,10 +8,15 @@
   </head>
   <body>
     <header class="cabecera">
-      <a class="cabecera__marca" href="#inicio">
-        <img class="cabecera__logo" src="/src/assets/logo.png" alt="" />
-        <span class="cabecera__nombre">FIGHT CLUB CANTO</span>
-      </a>
+      <div class="cabecera__barra">
+        <a class="cabecera__marca" href="#inicio">
+          <img class="cabecera__logo" src="/src/assets/logo.png" alt="" />
+          <span class="cabecera__nombre">FIGHT CLUB CANTO</span>
+        </a>
+        <a class="cabecera__cta js-whatsapp" href="#" target="_blank" rel="noopener">
+          Prueba gratis
+        </a>
+      </div>
       <nav class="cabecera__nav" aria-label="Secciones">
         <ul class="cabecera__lista">
           <li><a class="cabecera__enlace" href="#disciplinas">Disciplinas</a></li>
@@ -80,7 +85,9 @@
       <!-- 2. Disciplinas -->
       <section id="disciplinas" class="seccion">
         <div class="seccion__interior">
-          <h2>Disciplinas</h2>
+          <h2>
+            <img class="seccion__icono" src="/src/assets/garra.svg" alt="" aria-hidden="true" />Disciplinas
+          </h2>
           <div class="bloques bloques--2">
             <div class="tarjeta">
               <h3>Adultos</h3>
@@ -102,9 +109,11 @@
       </section>
 
       <!-- 3. Horario -->
-      <section id="horario" class="seccion">
+      <section id="horario" class="seccion seccion--alt">
         <div class="seccion__interior">
-          <h2>Horario</h2>
+          <h2>
+            <img class="seccion__icono" src="/src/assets/garra.svg" alt="" aria-hidden="true" />Horario
+          </h2>
           <div class="horario">
             <div class="horario__filtros" role="group" aria-label="Filtrar por disciplina"></div>
             <div class="horario__dias"></div>
@@ -115,7 +124,9 @@
       <!-- 4. Entrenadores -->
       <section id="entrenadores" class="seccion">
         <div class="seccion__interior">
-          <h2>Entrenadores</h2>
+          <h2>
+            <img class="seccion__icono" src="/src/assets/garra.svg" alt="" aria-hidden="true" />Entrenadores
+          </h2>
           <div class="bloques bloques--2">
             <div class="tarjeta entrenador">
               <div class="entrenador__foto">FOTO</div>
@@ -138,9 +149,11 @@
       </section>
 
       <!-- 5. Tarifas -->
-      <section id="tarifas" class="seccion">
+      <section id="tarifas" class="seccion seccion--alt">
         <div class="seccion__interior">
-          <h2>Tarifas</h2>
+          <h2>
+            <img class="seccion__icono" src="/src/assets/garra.svg" alt="" aria-hidden="true" />Tarifas
+          </h2>
           <div class="tarifas__tabla"></div>
 
           <h3>Calcula tu cuota</h3>
@@ -154,7 +167,9 @@
       <!-- 6. Tu primera clase -->
       <section id="primera-clase" class="seccion">
         <div class="seccion__interior">
-          <h2>Tu primera clase</h2>
+          <h2>
+            <img class="seccion__icono" src="/src/assets/garra.svg" alt="" aria-hidden="true" />Tu primera clase
+          </h2>
           <div class="faq">
             <details class="faq__item">
               <summary>¿Qué traigo el primer día?</summary>
@@ -202,44 +217,52 @@
         </div>
       </section>
 
-      <!-- 7. Contacto -->
-      <section id="contacto" class="seccion">
-        <div class="seccion__interior">
-          <h2>Contacto</h2>
-          <h3>Dónde estamos</h3>
-          <ul class="contacto__lista">
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Carrer+d%27Exemple+123+08014+Barcelona"
-                target="_blank"
-                rel="noopener"
-              >
-                Carrer d'Exemple 123, 08014 Barcelona
-              </a>
-            </li>
-            <li>
-              <a class="js-whatsapp-contacto" href="#" target="_blank" rel="noopener">
-                WhatsApp: 600 00 00 00
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/fightclub.bcn" target="_blank" rel="noopener">
-                Instagram: @fightclub.bcn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://search.google.com/local/reviews?placeid=PLACE_ID_PROVISIONAL"
-                target="_blank"
-                rel="noopener"
-              >
-                Reseñas en Google
-              </a>
-            </li>
-          </ul>
-          <a class="btn btn--primario js-whatsapp" href="#" target="_blank" rel="noopener">
+      <!-- Franja de cierre -->
+      <section id="prueba" class="franja">
+        <div class="franja__interior">
+          <h2>Prueba una clase gratis</h2>
+          <p class="franja__texto">
+            Sin compromiso. El primer día te prestamos guantes y bucal.
+          </p>
+          <a class="btn btn--grande btn--contraste js-whatsapp" href="#" target="_blank" rel="noopener">
             Prueba una clase gratis
           </a>
+        </div>
+      </section>
+
+      <!-- 7. Contacto -->
+      <section id="contacto" class="seccion seccion--alt">
+        <div class="seccion__interior contacto">
+          <h2>
+            <img class="seccion__icono" src="/src/assets/garra.svg" alt="" aria-hidden="true" />Contacto
+          </h2>
+          <h3>Dónde estamos</h3>
+          <p class="contacto__dir">Carrer d'Exemple 123, 08014 Barcelona</p>
+          <p class="contacto__horario"><a href="#horario">De lunes a viernes</a></p>
+          <div class="contacto__acciones">
+            <a
+              class="btn btn--linea"
+              href="https://www.google.com/maps/search/?api=1&query=Carrer+d%27Exemple+123+08014+Barcelona"
+              target="_blank"
+              rel="noopener"
+            >
+              Cómo llegar
+            </a>
+            <a class="btn btn--linea js-whatsapp-contacto" href="#" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+            <a class="btn btn--linea" href="https://instagram.com/fightclub.bcn" target="_blank" rel="noopener">
+              Instagram
+            </a>
+            <a
+              class="btn btn--linea"
+              href="https://search.google.com/local/reviews?placeid=PLACE_ID_PROVISIONAL"
+              target="_blank"
+              rel="noopener"
+            >
+              Reseñas en Google
+            </a>
+          </div>
         </div>
       </section>
     </main>

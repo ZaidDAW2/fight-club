@@ -2,49 +2,82 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-// Tabla de tarifas
+// ===== Tarjetas de tarifas =====
 .tarifas__tabla {
-  overflow-x: auto;
   margin-bottom: 2rem;
 }
 
 .tarifas__cuotas {
-  width: 100%;
-  border-collapse: collapse;
+  display: grid;
+  gap: 1rem;
 
-  caption {
-    margin-bottom: 0.5rem;
-    text-align: left;
-    font-size: 0.9rem;
-    color: $color-texto-suave;
-  }
-
-  th,
-  td {
-    padding: 0.7rem 0.75rem;
-    border-bottom: 1px solid $color-borde;
-    text-align: left;
-  }
-
-  thead th {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: $color-texto-suave;
-  }
-
-  tbody th {
-    font-weight: 600;
-  }
-
-  td {
-    text-align: right;
-    font-weight: 700;
-    white-space: nowrap;
+  @include desde($bp-md) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
   }
 }
 
-// Calculadora de cuota
+.tarifa {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1.75rem 1.25rem;
+  background: $color-superficie;
+  border: 1px solid $color-borde;
+  border-radius: 0.6rem;
+  text-align: center;
+
+  // Destacada: la más completa, en color de acento.
+  &--destacada {
+    background: $accent;
+    border-color: $accent;
+    color: $accent-text;
+  }
+
+  &__etiqueta {
+    position: absolute;
+    top: -0.7rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    background: $accent-text;
+    color: $accent;
+    font-family: $fuente-marca;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__nombre {
+    margin: 0;
+    font-family: $fuente-base;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  &__precio {
+    margin: 0;
+    font-family: $fuente-titulo;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 1;
+  }
+
+  &__periodo {
+    margin: 0;
+    font-size: 0.85rem;
+    color: $color-texto-suave;
+  }
+
+  &--destacada &__periodo {
+    color: $accent-text;
+    opacity: 0.75;
+  }
+}
+
+// ===== Calculadora de cuota (sin cambios) =====
 .calculadora {
   padding: 1.25rem;
   background: $color-superficie;

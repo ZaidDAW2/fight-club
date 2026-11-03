@@ -2,25 +2,44 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-// Textura de tela en todo el fondo (provisional, sin foto).
+// Textura de tela de respaldo (provisional, sin foto).
 body {
   @include tela($color-lienzo);
 }
 
 .seccion {
   padding: 3.5rem 1rem;
-  scroll-margin-top: $altura-cabecera;
+  scroll-margin-top: $offset-ancla;
+  background: $color-fondo;
+
+  // Ritmo: alterna el fondo de las secciones.
+  &--alt {
+    background: $color-fondo-alt;
+  }
 
   &__interior {
     max-width: $ancho-contenido;
     margin-inline: auto;
+  }
+
+  // Garra decorativa alineada con el título.
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__icono {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
   }
 }
 
 // ===== Portada =====
 .portada {
   position: relative;
-  scroll-margin-top: $altura-cabecera;
+  scroll-margin-top: $offset-ancla;
   padding: 2rem 1rem 3rem;
   @include tela($color-lienzo);
 
@@ -201,19 +220,64 @@ body {
   }
 }
 
+// ===== Franja de cierre (todo el ancho, en color de acento) =====
+.franja {
+  padding: 3rem 1rem;
+  scroll-margin-top: $offset-ancla;
+  background: $accent;
+  color: $accent-text;
+  text-align: center;
+
+  &__interior {
+    max-width: 40rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    color: $accent-text;
+  }
+
+  &__texto {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+}
+
 // ===== Contacto =====
-.contacto__lista {
-  display: grid;
-  gap: 0.75rem;
-  margin: 1rem 0 1.5rem;
-
-  a {
+.contacto {
+  &__dir {
+    margin: 0.5rem 0 0.25rem;
     color: $color-texto;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  }
 
-    &:hover {
-      color: #fff;
+  &__horario {
+    margin: 0 0 1.5rem;
+
+    a {
+      color: $color-texto;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  // Botones en fila (en columna en el móvil).
+  &__acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    @include desde($bp-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 }
